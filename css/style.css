@@ -1,0 +1,320 @@
+/* applying Google font over the website */
+body {
+    font-family: 'Josefin Sans', Arial, sans-serif;
+    font-weight: 400;
+}
+
+/* reusable transition class */
+.hover-pop {
+    transition: all 0.3s ease-in-out;
+}
+.hover-pop:hover {
+    transform: translateY(-10px);
+}
+
+/* styling menu icon */
+.nav-menu {
+    border: none;
+    background-color: #fff;
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+
+/* styling navbar links */
+.navbar-nav a {
+    color: black;
+    position: relative;
+}
+.navbar-nav a:hover {
+    color: #fca61f;
+}
+.navbar-nav a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    background: #fca61f;
+    transition: width 0.3s ease, left 0.3s ease;
+    width: 0;
+}
+.navbar-nav a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+/* styling contact button */
+.c-btn {
+    border: none;
+    background: #fca61f;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* home section */
+.home {
+    background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
+    padding: 30px 0 10px;
+}
+.home h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.c-orange {
+    color: #6f34fe;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.home p {
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.h-btn {
+    transition: all 0.3s ease;
+}
+.h-btn:hover {
+    background: #6f34fe;
+    color: #fff;
+    transform: translateY(-20px);
+}
+.link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fca61f;
+    position: relative;
+}
+.link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    background-color: #6f34fe;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.link:hover {
+    color: #6f34fe;
+}
+.link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* adding animation to home section image */
+.home img {
+    animation: floatimg 4s ease-in-out infinite;
+}
+@keyframes floatimg {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-24px); }
+    100% { transform: translateX(0); }
+}
+
+/* expertise section */
+.heading small {
+    color: #6f34fe;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.heading h3 {
+    margin-top: 0.5rem;
+    color: #3f396d;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.expertise h4 {
+    color: #3f396d;
+    font-weight: 700;
+}
+.expertise a {
+    text-decoration: none;
+    color: #fca61f;
+}
+.expertise a:hover {
+    color: #6f34fe;
+}
+.expertise .service-card {
+    text-align: center;
+    padding: 15px;
+    border-radius: 0.7rem;
+}
+
+/* skill section */
+.skill {
+    background-color: rgb(234, 234, 249);
+}
+.progress-card {
+    padding: 12% 10% 10% 15%;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10%;
+    transition: transform 0.6s;
+}
+.progress-card:hover {
+    transform: scale(1.1);
+}
+.circular-progress {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(
+      var(--clr) 0deg,
+      #e0e0e0 0deg
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #3f396d;
+  }
+  
+  .html-css {
+    --clr: #f16529;
+  }
+  
+  .javascript {
+    --clr: #f7df1e;
+  }
+  
+  .php {
+    --clr: #8993be;
+  }
+  
+  .reactjs {
+    --clr: #61dafb;
+  }
+.text {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.heading p {
+    font-size: 1.3rem;
+}
+
+/* contact section */
+.contact {
+    background-color: #f3f3f3;
+}
+.contact-details i {
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+.contact-details p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.contact-form .form-control {
+    padding: 10px;
+    width: 80%;
+}
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #fca61f;
+}
+
+/* footer section */
+footer {
+    background-color: #211e39;
+}
+footer .link-group a {
+    margin: 1rem 10px 0;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+footer .link-group a:hover {
+    color: #fca61f;
+}
+.social-links button {
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 14px 15px 10px;
+    transition: all 0.3s ease-in-out;
+}
+.social-links button:hover {
+    color: #fff;
+    transform: translateY(-20px);
+}
+.social-links .instagram {
+    color: #f33a7e;
+}
+.social-links .instagram:hover {
+    background-color: #f33a7e;
+}
+.social-links .whatsapp {
+    color: #25D366;
+}
+.social-links .whatsapp:hover {
+    background-color: #25D366;
+}
+.social-links .facebook {
+    color: #255afc;
+}
+.social-links .facebook:hover {
+    background-color: #255afc;
+}
+
+/* back to top button */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 1.4rem;
+    background-color: #fca61f;
+    color: #fff;
+    animation: pulse 3s infinite;
+}
+
+/* keyboard focus accessibility */
+a:focus,
+button:focus {
+    outline: 2px dashed #6f34fe;
+    outline-offset: 4px;
+}
+
+/* responsive adjustments */
+@media screen and (max-width: 768px) {
+    .progress-card {
+        padding: 10%;
+    }
+
+    .contact-form .form-control {
+        width: 100%;
+    }
+
+    .c-orange,
+    .home h2 {
+        font-size: 2.5rem;
+    }
+
+    .social-links button {
+        margin-right: 0.5rem;
+        padding: 10px;
+    }
+}
